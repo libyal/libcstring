@@ -1,0 +1,60 @@
+TODO
+* update conditions in include/libcstring.h.in
+* add tests
+* move locale funtions to different library ?
+
+20141001
+* removed README.macosx
+* worked on stand-alone version
+
+20140908
+* worked on stand-alone version
+
+20140505
+* fixes to build static library with mingw and cygwin
+
+20140105
+* 2014 update
+* updated man page
+
+20130509
+* updated common files
+
+20130403
+* applied updates
+
+20130103
+* 2013 update
+
+20121224
+* updated configure.ac for gettext
+
+20120919
+* applied updates
+
+20120904
+* applied updates
+
+20120507
+* email and project site change
+
+20120425
+* version update for pkg-config fix
+
+20120408
+* fix for codegear caseless wide string compare
+
+20120406
+* minor changes
+
+20120403
+* added HAVE_LOCAL_LIBCSTRING to wide string
+* added wide string functions to include header
+* added DLL stub code
+
+20120401
+* Worked on stand-alone version
+
+20120325
+* Worked on stand-alone version
+

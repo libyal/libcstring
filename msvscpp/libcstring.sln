@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcstring", "libcstring\libcstring.vcproj", "{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+		VSDebug|Win32 = VSDebug|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}.Release|Win32.ActiveCfg = Release|Win32
+		{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}.Release|Win32.Build.0 = Release|Win32
+		{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
+		{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}.VSDebug|Win32.Build.0 = VSDebug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

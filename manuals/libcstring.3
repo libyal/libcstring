@@ -1,0 +1,94 @@
+.Dd January 5, 2014
+.Dt libcstring 3
+.Os libcstring
+.Sh NAME
+.Nm libcstring.h
+.Nd Library to support cross-platform C string functions
+.Sh LIBRARY
+.Lb libcstring
+.Sh SYNOPSIS
+.In libcstring.h
+.Pp
+Support functions
+.Ft const char *
+.Fn libcstring_get_version "void"
+.Pp
+Narrow character string functions
+.Ft size_t
+.Fn libcstring_narrow_string_length "const char *string"
+.Ft int
+.Fn libcstring_narrow_string_compare "const char *string1, const char *string2, size_t size"
+.Ft int
+.Fn libcstring_narrow_string_compare_no_case "const char *string1, const char *string2, size_t size"
+.Ft char *
+.Fn libcstring_narrow_string_copy "char *destination, const char *source, size_t size"
+.Ft char *
+.Fn libcstring_narrow_string_search_character "const char *string, int character, size_t size"
+.Ft char *
+.Fn libcstring_narrow_string_search_character_reverse "const char *string, int character, size_t size"
+.Ft char *
+.Fn libcstring_narrow_string_search_character_reverse "const char *string, const char *substring, size_t size"
+.Ft int
+.Fn libcstring_narrow_string_snprintf "char *target, size_t size, ..."
+.Ft int
+.Fn libcstring_narrow_string_sscanf "char *string, const char *format, ..."
+.Pp
+Wide character string functions
+.Ft size_t
+.Fn libcstring_wide_string_length "const wchar_t *string"
+.Ft int
+.Fn libcstring_wide_string_compare "const wchar_t *string1, const wchar_t *string2, size_t size"
+.Ft int
+.Fn libcstring_wide_string_compare_no_case "const wchar_t *string1, const wchar_t *string2, size_t size"
+.Ft wchar_t *
+.Fn libcstring_wide_string_copy "wchar_t *destination, const wchar_t *source, size_t size"
+.Ft wchar_t *
+.Fn libcstring_wide_string_search_character "const wchar_t *string, wchar_t character, size_t size"
+.Ft wchar_t *
+.Fn libcstring_wide_string_search_character_reverse "const wchar_t *string, wchar_t character, size_t size"
+.Ft wchar_t *
+.Fn libcstring_wide_string_search_character_reverse "const wchar_t *string, const wchar_t *substring, size_t size"
+.Ft int
+.Fn libcstring_wide_string_snwprintf "wchar_t *target, size_t size, ..."
+.Ft int
+.Fn libcstring_wide_string_vsnwprintf "wchar_t *string, const wchar_t *format, ..."
+.Pp
+System (character) string functions
+.Ft int
+.Fn libcstring_system_string_compare "const libcstring_system_character_t *string1, const libcstring_system_character_t *string2, size_t size"
+.Ft int
+.Fn libcstring_system_string_compare_no_case "const libcstring_system_character_t *string1, const libcstring_system_character_t *string2, size_t size"
+.Ft libcstring_system_character_t *
+.Fn libcstring_system_string_copy "libcstring_system_character_t *destination, const libcstring_system_character_t *source, size_t size"
+.Ft size_t
+.Fn libcstring_system_string_length "const libcstring_system_character_t *string"
+.Ft libcstring_system_character_t *
+.Fn libcstring_system_string_search_character "const libcstring_system_character_t *string, libcstring_system_character_t character, size_t size"
+.Ft libcstring_system_character_t *
+.Fn libcstring_system_string_search_character_reverse "const libcstring_system_character_t *string, libcstring_system_character_t character, size_t size"
+.Ft libcstring_system_character_t *
+.Fn libcstring_system_string_search_character_reverse "const libcstring_system_character_t *string, const libcstring_system_character_t *substring, size_t size"
+.Ft int
+.Fn libcstring_system_string_sprintf "libcstring_system_character_t *target, size_t size, ..."
+.Ft int
+.Fn libcstring_system_string_vsprintf "libcstring_system_character_t *string, const libcstring_system_character_t *format, ..."
+.Sh DESCRIPTION
+The
+.Fn libcstring_get_version
+function is used to retrieve the library version.
+.Sh RETURN VALUES
+Most of the functions return NULL or -1 on error, dependent on the return type. For the actual return values refer to libcstring.h
+.Sh ENVIRONMENT
+None
+.Sh FILES
+None
+.Sh BUGS
+Please report bugs of any kind to <joachim.metz@gmail.com> or on the project website:
+http://code.google.com/p/libclibs/
+.Sh AUTHOR
+These man pages were written by Joachim Metz.
+.Sh COPYRIGHT
+Copyright 2010-2014, Joachim Metz <joachim.metz@gmail.com>.
+This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+.Sh SEE ALSO
+the libcstring.h include file
