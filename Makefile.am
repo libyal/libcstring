@@ -9,6 +9,17 @@ SUBDIRS = \
 	tests \
 	msvscpp
 
+DPKG_FILES = \
+	dpkg/changelog \
+	dpkg/changelog.in \
+       	dpkg/compat \
+       	dpkg/control \
+       	dpkg/copyright \
+       	dpkg/copyright.in \
+       	dpkg/rules \
+       	dpkg/libcstring-dev.docs \
+       	dpkg/libcstring.docs
+
 GETTEXT_FILES = \
 	config.rpath \
 	po/Makevars.in
@@ -21,6 +32,7 @@ SPEC_FILES = \
 	libcstring.spec.in
 
 EXTRA_DIST = \
+	$(DPKG_FILES) \
 	$(GETTEXT_FILES) \
 	$(PKGCONFIG_FILES) \
         $(SPEC_FILES)

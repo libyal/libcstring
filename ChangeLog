@@ -6,6 +6,9 @@ TODO
 20141001
 * removed README.macosx
 * worked on stand-alone version
+* changes for project site move
+* added dpkg files
+* added msvscpp files
 
 20140908
 * worked on stand-alone version

@@ -1,3 +1,6 @@
-See:
-* README.macosx
+libcstring is a library for cross-platform C string functions.
+
+For more information see:
+* Project documentation: https://github.com/libyal/libcstring/wiki/Home
+* How to build from source: https://github.com/libyal/libcstring/wiki/Building
 
