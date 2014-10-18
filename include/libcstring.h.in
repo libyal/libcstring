@@ -67,8 +67,8 @@ const char *libcstring_get_version(
 	g_realloc( (gpointer) buffer, (gsize) ( sizeof( char ) * size ) )
 
 #elif defined( HAVE_REALLOC ) || defined( WINAPI )
-#define libcstring_narrow_string_reallocate( buffer, ( sizeof( char ) * size ) ) \
-	realloc( (void *) buffer, size )
+#define libcstring_narrow_string_reallocate( buffer, size ) \
+	realloc( (void *) buffer, ( sizeof( char ) * size ) )
 
 #elif defined( WINAPI )
 /* HeapReAlloc does not allocate empty (NULL) buffers as realloc does
@@ -231,8 +231,8 @@ const char *libcstring_get_version(
 	g_realloc( (gpointer) buffer, (gsize) ( sizeof( wchar_t ) * size ) )
 
 #elif defined( HAVE_REALLOC ) || defined( WINAPI )
-#define libcstring_wide_string_reallocate( buffer, ( sizeof( wchar_t ) * size ) ) \
-	realloc( (void *) buffer, size )
+#define libcstring_wide_string_reallocate( buffer, size ) \
+	realloc( (void *) buffer, ( sizeof( wchar_t ) * size ) )
 
 #elif defined( WINAPI )
 /* HeapReAlloc does not allocate empty (NULL) buffers as realloc does
@@ -386,6 +386,12 @@ int libcstring_narrow_system_string_codepage;
 #define _LIBCSTRING_SYSTEM_STRING( string ) \
 	_LIBCSTRING_SYSTEM_STRING_INTERMEDIATE( string )
 
+#define libcstring_system_string_allocate( size ) \
+	libcstring_wide_string_allocate( size )
+
+#define libcstring_system_string_reallocate( string, size ) \
+	libcstring_wide_string_reallocate( string, size )
+
 #define libcstring_system_string_compare( destination, source, size ) \
 	libcstring_wide_string_compare( destination, source, size )
 
@@ -429,6 +435,12 @@ int libcstring_narrow_system_string_codepage;
 
 #define _LIBCSTRING_SYSTEM_STRING( string ) \
 	string
+
+#define libcstring_system_string_allocate( size ) \
+	libcstring_narrow_string_allocate( size )
+
+#define libcstring_system_string_reallocate( string, size ) \
+	libcstring_narrow_string_reallocate( string, size )
 
 #define libcstring_system_string_compare( destination, source, size ) \
 	libcstring_narrow_string_compare( destination, source, size )

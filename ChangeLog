@@ -3,6 +3,9 @@ TODO
 * add tests
 * move locale funtions to different library ?
 
+20141018
+* fixes in include header
+
 20141016
 * added allocation macros to include header
 
