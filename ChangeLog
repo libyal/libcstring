@@ -3,6 +3,9 @@ TODO
 * add tests
 * move locale funtions to different library ?
 
+20141227
+* changes for Borland C compiler
+
 20141018
 * fixes in include header
 
