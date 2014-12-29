@@ -18,7 +18,8 @@ DPKG_FILES = \
        	dpkg/copyright.in \
        	dpkg/rules \
        	dpkg/libcstring-dev.docs \
-       	dpkg/libcstring.docs
+       	dpkg/libcstring.docs \
+	dpkg/source/format
 
 GETTEXT_FILES = \
 	config.rpath \
@@ -35,7 +36,7 @@ EXTRA_DIST = \
 	$(DPKG_FILES) \
 	$(GETTEXT_FILES) \
 	$(PKGCONFIG_FILES) \
-        $(SPEC_FILES)
+	$(SPEC_FILES)
 
 MAINTAINERCLEANFILES = \
 	Makefile.in

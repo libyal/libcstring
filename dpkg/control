@@ -1,13 +1,12 @@
 Source: libcstring
-Section: unknown
+Section: libs
 Priority: extra
 Maintainer: Joachim Metz <joachim.metz@gmail.com>
 Build-Depends: debhelper (>= 7), autotools-dev
-Standards-Version: 3.8.3
+Standards-Version: 3.9.5
 Homepage: https://github.com/libyal/libcstring/
 
 Package: libcstring
-Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: libcstring-dbg
@@ -17,14 +16,14 @@ Description: Library to support cross-platform C string functions
 Package: libcstring-dbg
 Architecture: any
 Section: debug
-Depends: libcstring (= ${Source-Version}), ${misc:Depends}
+Depends: libcstring (= ${binary:Version}), ${misc:Depends}
 Description: Debugging symbols for libcstring
  Debugging symbols for libcstring.
 
 Package: libcstring-dev
 Section: libdevel
 Architecture: any
-Depends: libcstring (= ${Source-Version})
+Depends: libcstring (= ${binary:Version}), ${misc:Depends}
 Description: Header files and libraries for developing applications for libcstring
  Header files and libraries for developing applications for libcstring.
 
