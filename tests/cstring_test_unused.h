@@ -1,5 +1,5 @@
 /*
- * Support functions
+ * The unused definition
  *
  * Copyright (C) 2010-2016, Joachim Metz <joachim.metz@gmail.com>
  *
@@ -19,31 +19,32 @@
  * along with this software.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#if !defined( _LIBCSTRING_SUPPORT_H )
-#define _LIBCSTRING_SUPPORT_H
+#if !defined( _CSTRING_TEST_UNUSED_H )
+#define _CSTRING_TEST_UNUSED_H
 
 #include <common.h>
-#include <types.h>
 
-#include <stdio.h>
+#if !defined( CSTRING_TEST_ATTRIBUTE_UNUSED )
 
-#include "libcstring_extern.h"
+#if defined( __GNUC__ ) && __GNUC__ >= 3
+#define CSTRING_TEST_ATTRIBUTE_UNUSED	__attribute__ ((__unused__))
 
-#if defined( __cplusplus )
-extern "C" {
-#endif
+#else
+#define CSTRING_TEST_ATTRIBUTE_UNUSED
 
-#if !defined( HAVE_LOCAL_LIBCSTRING )
+#endif /* defined( __GNUC__ ) && __GNUC__ >= 3 */
 
-LIBCSTRING_EXTERN \
-const char *libcstring_get_version(
-             void );
+#endif /* !defined( CSTRING_TEST_ATTRIBUTE_UNUSED ) */
 
-#endif /* !defined( HAVE_LOCAL_LIBCSTRING ) */
+#if defined( _MSC_VER )
+#define CSTRING_TEST_UNREFERENCED_PARAMETER( parameter ) \
+	UNREFERENCED_PARAMETER( parameter );
 
-#if defined( __cplusplus )
-}
-#endif
+#else
+#define CSTRING_TEST_UNREFERENCED_PARAMETER( parameter ) \
+	/* parameter */
 
-#endif /* !defined( _LIBCSTRING_SUPPORT_H ) */
+#endif /* defined( _MSC_VER ) */
+
+#endif /* !defined( _CSTRING_TEST_UNUSED_H ) */
 

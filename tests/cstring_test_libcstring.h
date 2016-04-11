@@ -1,5 +1,5 @@
 /*
- * Support functions
+ * The internal libcstring header
  *
  * Copyright (C) 2010-2016, Joachim Metz <joachim.metz@gmail.com>
  *
@@ -19,31 +19,20 @@
  * along with this software.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#if !defined( _LIBCSTRING_SUPPORT_H )
-#define _LIBCSTRING_SUPPORT_H
+#if !defined( _CSTRING_TEST_LIBCSTRING_H )
+#define _CSTRING_TEST_LIBCSTRING_H
 
 #include <common.h>
-#include <types.h>
 
-#include <stdio.h>
-
-#include "libcstring_extern.h"
-
-#if defined( __cplusplus )
-extern "C" {
+/* If Cygwin libtool DLL support is enabled and do not want to create static
+ * executables * set LIBCSTRING_DLL_IMPORT before including
+ * libcstring.h
+ */
+#if defined( _WIN32 ) && defined( DLL_EXPORT ) && !defined( HAVE_STATIC_EXECUTABLES )
+#define LIBCSTRING_DLL_IMPORT
 #endif
 
-#if !defined( HAVE_LOCAL_LIBCSTRING )
+#include <libcstring.h>
 
-LIBCSTRING_EXTERN \
-const char *libcstring_get_version(
-             void );
-
-#endif /* !defined( HAVE_LOCAL_LIBCSTRING ) */
-
-#if defined( __cplusplus )
-}
-#endif
-
-#endif /* !defined( _LIBCSTRING_SUPPORT_H ) */
+#endif /* !defined( _CSTRING_TEST_LIBCSTRING_H ) */
 

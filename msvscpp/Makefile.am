@@ -1,4 +1,5 @@
 MSVSCPP_FILES = \
+	cstring_test_get_version/cstring_test_get_version.vcproj \
 	libcstring/libcstring.vcproj \
 	libcstring.sln
 

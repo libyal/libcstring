@@ -1,7 +1,9 @@
 TODO
 * update conditions in include/libcstring.h.in
-* add tests
-* move locale funtions to different library ?
+
+20160411
+* applied updates
+* worked on tests
 
 20160105
 * 2016 update

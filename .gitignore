@@ -116,4 +116,5 @@ stamp-h[1-9]
 /include/libcstring/types.h
 /libcstring/libcstring.rc
 /libcstring/libcstring_definitions.h
+/tests/cstring_test_get_version
 /tests/tmp*
