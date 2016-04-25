@@ -25,8 +25,7 @@
 #include <common.h>
 
 /* If Cygwin libtool DLL support is enabled and do not want to create static
- * executables * set LIBCSTRING_DLL_IMPORT before including
- * libcstring.h
+ * executables set LIBCSTRING_DLL_IMPORT before including libcstring.h
  */
 #if defined( _WIN32 ) && defined( DLL_EXPORT ) && !defined( HAVE_STATIC_EXECUTABLES )
 #define LIBCSTRING_DLL_IMPORT
