@@ -27,6 +27,10 @@
 #include <libcstring/features.h>
 #include <libcstring/types.h>
 
+#if defined( HAVE_STRING_H ) || defined( WINAPI )
+#include <string.h>
+#endif
+
 #if defined( __cplusplus )
 extern "C" {
 #endif
@@ -487,5 +491,5 @@ int libcstring_narrow_system_string_codepage;
 }
 #endif
 
-#endif
+#endif /* !defined( _LIBCSTRING_H ) */
 
