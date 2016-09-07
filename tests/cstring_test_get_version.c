@@ -26,6 +26,7 @@
 #endif
 
 #include "cstring_test_libcstring.h"
+#include "cstring_test_libcstring.h"
 #include "cstring_test_macros.h"
 #include "cstring_test_unused.h"
 
@@ -45,7 +46,7 @@ int cstring_test_get_version(
 	          LIBCSTRING_VERSION_STRING,
 	          9 );
 
-	CSTRING_TEST_ASSERT_EQUAL(
+	CSTRING_TEST_ASSERT_EQUAL_INT(
 	 "result",
 	 result,
 	 0 );
