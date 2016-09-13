@@ -3,9 +3,10 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name: libuna
+Name: libcstring
 Description: Library to support cross-platform C string functions
 Version: @VERSION@
 Libs: -L${libdir} -lcstring
+Libs.private: 
 Cflags: -I${includedir}
 
