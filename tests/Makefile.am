@@ -14,15 +14,15 @@ EXTRA_DIST = \
 	$(check_SCRIPTS)
 
 check_PROGRAMS = \
-	cstring_test_get_version
+	cstring_test_support
 
-cstring_test_get_version_SOURCES = \
+cstring_test_support_SOURCES = \
 	cstring_test_libcstring.h \
-	cstring_test_get_version.c \
 	cstring_test_macros.h \
+	cstring_test_support.c \
 	cstring_test_unused.h
 
-cstring_test_get_version_LDADD = \
+cstring_test_support_LDADD = \
 	../libcstring/libcstring.la
 
 MAINTAINERCLEANFILES = \

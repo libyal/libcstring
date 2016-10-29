@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual C++ Express 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cstring_test_get_version", "cstring_test_get_version\cstring_test_get_version.vcproj", "{E86A695C-6239-415C-BD0F-7DC76CBA7D74}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cstring_test_support", "cstring_test_support\cstring_test_support.vcproj", "{1A9AAD63-2AAB-4AB0-93D9-A36FC499F745}"
 	ProjectSection(ProjectDependencies) = postProject
 		{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7} = {75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}
 	EndProjectSection
@@ -14,10 +14,10 @@ Global
 		VSDebug|Win32 = VSDebug|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E86A695C-6239-415C-BD0F-7DC76CBA7D74}.Release|Win32.ActiveCfg = Release|Win32
-		{E86A695C-6239-415C-BD0F-7DC76CBA7D74}.Release|Win32.Build.0 = Release|Win32
-		{E86A695C-6239-415C-BD0F-7DC76CBA7D74}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
-		{E86A695C-6239-415C-BD0F-7DC76CBA7D74}.VSDebug|Win32.Build.0 = VSDebug|Win32
+		{1A9AAD63-2AAB-4AB0-93D9-A36FC499F745}.Release|Win32.ActiveCfg = Release|Win32
+		{1A9AAD63-2AAB-4AB0-93D9-A36FC499F745}.Release|Win32.Build.0 = Release|Win32
+		{1A9AAD63-2AAB-4AB0-93D9-A36FC499F745}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
+		{1A9AAD63-2AAB-4AB0-93D9-A36FC499F745}.VSDebug|Win32.Build.0 = VSDebug|Win32
 		{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}.Release|Win32.ActiveCfg = Release|Win32
 		{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}.Release|Win32.Build.0 = Release|Win32
 		{75A794E5-925E-4767-BDEF-3AD7A4B6D6F7}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
