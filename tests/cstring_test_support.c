@@ -1,5 +1,5 @@
 /*
- * Library get version test program
+ * Library support functions test program
  *
  * Copyright (C) 2010-2016, Joachim Metz <joachim.metz@gmail.com>
  *
@@ -30,7 +30,7 @@
 #include "cstring_test_macros.h"
 #include "cstring_test_unused.h"
 
-/* Tests retrieving the library version
+/* Tests the libcstring_get_version function
  * Returns 1 if successful or 0 if not
  */
 int cstring_test_get_version(
@@ -74,7 +74,7 @@ int main(
 
 	CSTRING_TEST_RUN(
 	 "libcstring_get_version",
-	 cstring_test_get_version() )
+	 cstring_test_get_version );
 
 	return( EXIT_SUCCESS );
 
