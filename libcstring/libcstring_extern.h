@@ -42,5 +42,5 @@
 
 #endif
 
-#endif
+#endif /* !defined( _LIBCSTRING_INTERNAL_EXTERN_H ) */
 

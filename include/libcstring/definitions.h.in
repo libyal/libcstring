@@ -44,7 +44,7 @@
 #define PRIc_LIBCSTRING_SYSTEM				"c"
 #define PRIs_LIBCSTRING_SYSTEM				"s"
 
-#endif
+#endif /* defined( WINAPI ) && ( defined( _UNICODE ) || defined( UNICODE ) ) */
 
-#endif
+#endif /* !defined( _LIBCSTRING_DEFINITIONS_H ) */
 

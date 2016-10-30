@@ -223,5 +223,5 @@ typedef int libcstring_system_integer_t;
 }
 #endif
 
-#endif
+#endif /* !defined( _LIBCSTRING_TYPES_H ) */
 
