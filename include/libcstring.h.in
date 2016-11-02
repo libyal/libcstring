@@ -51,37 +51,13 @@ const char *libcstring_get_version(
 
 /* String allocation
  */
-#if defined( HAVE_GLIB_H )
 #define libcstring_narrow_string_allocate( size ) \
-	g_malloc( (gsize) ( sizeof( char ) * size ) )
-
-#elif defined( HAVE_MALLOC ) || defined( WINAPI )
-#define libcstring_narrow_string_allocate( size ) \
-	malloc( sizeof( char ) * size )
-
-#elif defined( WINAPI )
-#define libcstring_narrow_string_allocate( size ) \
-	HeapAlloc( GetProcessHeap(), 0, (SIZE_T) ( sizeof( char ) * size ) )
-#endif
+  (char *) memory_allocate( sizeof( char ) * ( size ) )
 
 /* String reallocation
  */
-#if defined( HAVE_GLIB_H )
 #define libcstring_narrow_string_reallocate( buffer, size ) \
-	g_realloc( (gpointer) buffer, (gsize) ( sizeof( char ) * size ) )
-
-#elif defined( HAVE_REALLOC ) || defined( WINAPI )
-#define libcstring_narrow_string_reallocate( buffer, size ) \
-	realloc( (void *) buffer, ( sizeof( char ) * size ) )
-
-#elif defined( WINAPI )
-/* HeapReAlloc does not allocate empty (NULL) buffers as realloc does
- */
-#define libcstring_narrow_string_reallocate( buffer, size ) \
-	( buffer == NULL ) ? \
-	HeapAlloc( GetProcessHeap(), 0, (SIZE_T) ( sizeof( char ) * size ) ) : \
-	HeapReAlloc( GetProcessHeap(), 0, (LPVOID) buffer, (SIZE_T) ( sizeof( char ) * size ) )
-#endif
+  (char *) memory_reallocate( string, ( sizeof( char ) * ( size ) ) )
 
 /* String length
  */
@@ -215,37 +191,13 @@ const char *libcstring_get_version(
 
 /* String allocation
  */
-#if defined( HAVE_GLIB_H )
 #define libcstring_wide_string_allocate( size ) \
-	g_malloc( (gsize) ( sizeof( wchar_t ) * size ) )
-
-#elif defined( HAVE_MALLOC ) || defined( WINAPI )
-#define libcstring_wide_string_allocate( size ) \
-	malloc( sizeof( wchar_t ) * size )
-
-#elif defined( WINAPI )
-#define libcstring_wide_string_allocate( size ) \
-	HeapAlloc( GetProcessHeap(), 0, (SIZE_T) ( sizeof( wchar_t ) * size ) )
-#endif
+  (wchar_t *) memory_allocate( sizeof( wchar_t ) * ( size ) )
 
 /* String reallocation
  */
-#if defined( HAVE_GLIB_H )
 #define libcstring_wide_string_reallocate( buffer, size ) \
-	g_realloc( (gpointer) buffer, (gsize) ( sizeof( wchar_t ) * size ) )
-
-#elif defined( HAVE_REALLOC ) || defined( WINAPI )
-#define libcstring_wide_string_reallocate( buffer, size ) \
-	realloc( (void *) buffer, ( sizeof( wchar_t ) * size ) )
-
-#elif defined( WINAPI )
-/* HeapReAlloc does not allocate empty (NULL) buffers as realloc does
- */
-#define libcstring_wide_string_reallocate( buffer, size ) \
-	( buffer == NULL ) ? \
-	HeapAlloc( GetProcessHeap(), 0, (SIZE_T) ( sizeof( wchar_t ) * size ) ) : \
-	HeapReAlloc( GetProcessHeap(), 0, (LPVOID) buffer, (SIZE_T) ( sizeof( wchar_t ) * size ) )
-#endif
+  (wchar_t *) memory_reallocate( string, ( sizeof( wchar_t ) * ( size ) ) )
 
 /* String length
  */
