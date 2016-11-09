@@ -1,12 +1,10 @@
 libcstring is a library for cross-platform C string functions.
 
+libcstring has been deprecated in favor of having the majority of the macros in
+the common subdirectory.
+
 Project information:
 
-* Status: alpha
+* Status: deprecated
 * Licence: LGPLv3+
-
-For more information see:
-
-* Project documentation: https://github.com/libyal/libcstring/wiki/Home
-* How to build from source: https://github.com/libyal/libcstring/wiki/Building
 
