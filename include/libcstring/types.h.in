@@ -1,7 +1,7 @@
 /*
  * Type definitions for libcstring
  *
- * Copyright (C) 2010-2016, Joachim Metz <joachim.metz@gmail.com>
+ * Copyright (C) 2010-2017, Joachim Metz <joachim.metz@gmail.com>
  *
  * Refer to AUTHORS for acknowledgements.
  *
@@ -196,26 +196,6 @@ typedef int64_t off64_t;
 #undef __USE_UNIX98
 #undef LIBCSTRING_DEFINITION_UNIX98
 #endif
-
-#endif
-
-/* The following type definitions hide internal data structures
- */
-#if defined( WINAPI ) && ( defined( _UNICODE ) || defined( UNICODE ) )
-
-/* The system character type is wide
- * A system string contains either UTF-16 or UTF-32
- */
-typedef wchar_t libcstring_system_character_t;
-typedef wint_t libcstring_system_integer_t;
-
-#else
-
-/* The system character type is narrow
- * A system string contains either UTF-8 or extended ASCII with a codepage
- */
-typedef char libcstring_system_character_t;
-typedef int libcstring_system_integer_t;
 
 #endif
 

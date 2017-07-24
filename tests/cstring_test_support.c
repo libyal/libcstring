@@ -1,7 +1,7 @@
 /*
  * Library support functions test program
  *
- * Copyright (C) 2010-2016, Joachim Metz <joachim.metz@gmail.com>
+ * Copyright (C) 2010-2017, Joachim Metz <joachim.metz@gmail.com>
  *
  * Refer to AUTHORS for acknowledgements.
  *
@@ -20,12 +20,14 @@
  */
 
 #include <common.h>
+#include <file_stream.h>
+#include <narrow_string.h>
+#include <types.h>
 
 #if defined( HAVE_STDLIB_H ) || defined( WINAPI )
 #include <stdlib.h>
 #endif
 
-#include "cstring_test_libcstring.h"
 #include "cstring_test_libcstring.h"
 #include "cstring_test_macros.h"
 #include "cstring_test_unused.h"
@@ -41,7 +43,7 @@ int cstring_test_get_version(
 
 	version_string = libcstring_get_version();
 
-	result = libcstring_narrow_string_compare(
+	result = narrow_string_compare(
 	          version_string,
 	          LIBCSTRING_VERSION_STRING,
 	          9 );
@@ -59,7 +61,7 @@ on_error:
 
 /* The main program
  */
-#if defined( LIBCSTRING_HAVE_WIDE_SYSTEM_CHARACTER )
+#if defined( HAVE_WIDE_SYSTEM_CHARACTER )
 int wmain(
      int argc CSTRING_TEST_ATTRIBUTE_UNUSED,
      wchar_t * const argv[] CSTRING_TEST_ATTRIBUTE_UNUSED )

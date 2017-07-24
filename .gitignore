@@ -113,12 +113,12 @@ stamp-h[1-9]
 /common/config.h.in
 /common/types.h
 /dpkg/changelog
-/dpkg/copyright
 /include/libcstring.h
 /include/libcstring/definitions.h
 /include/libcstring/features.h
 /include/libcstring/types.h
 /libcstring/libcstring.rc
 /libcstring/libcstring_definitions.h
+/tests/*.exe
 /tests/cstring_test_support
 /tests/tmp*

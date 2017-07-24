@@ -1,7 +1,7 @@
 /*
  * Definitions for libcstring
  *
- * Copyright (C) 2010-2016, Joachim Metz <joachim.metz@gmail.com>
+ * Copyright (C) 2010-2017, Joachim Metz <joachim.metz@gmail.com>
  *
  * Refer to AUTHORS for acknowledgements.
  *
@@ -30,19 +30,19 @@
 #define LIBCSTRING_HAVE_WIDE_SYSTEM_CHARACTER           1
 #endif
 
-#define LIBCSTRING_VERSION				@VERSION@
+#define LIBCSTRING_VERSION		@VERSION@
 
 /* The libcstring version string
  */
-#define LIBCSTRING_VERSION_STRING			"@VERSION@"
+#define LIBCSTRING_VERSION_STRING	"@VERSION@"
 
 #if defined( WINAPI ) && ( defined( _UNICODE ) || defined( UNICODE ) )
-#define PRIc_LIBCSTRING_SYSTEM				"lc"
-#define PRIs_LIBCSTRING_SYSTEM				"ls"
+#define PRIc_LIBCSTRING_SYSTEM		"lc"
+#define PRIs_LIBCSTRING_SYSTEM		"ls"
 
 #else
-#define PRIc_LIBCSTRING_SYSTEM				"c"
-#define PRIs_LIBCSTRING_SYSTEM				"s"
+#define PRIc_LIBCSTRING_SYSTEM		"c"
+#define PRIs_LIBCSTRING_SYSTEM		"s"
 
 #endif /* defined( WINAPI ) && ( defined( _UNICODE ) || defined( UNICODE ) ) */
 
