@@ -5,11 +5,11 @@ Summary: Library to support cross-platform C string functions
 Group: System Environment/Libraries
 License: LGPL
 Source: %{name}-%{version}.tar.gz
-URL: https://github.com/libyal/libcstring/
+URL: https://github.com/libyal/libcstring
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %description
-libcstring is a library to support cross-platform C string functions
+Library to support cross-platform C string functions
 
 %package devel
 Summary: Header files and libraries for developing applications for libcstring
